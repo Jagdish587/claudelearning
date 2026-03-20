@@ -15,9 +15,16 @@ python -c "from calculator import add; print(add(2, 3))"
 
 ## Running Tests
 
-No test framework is set up yet. To run tests if added:
+Tests are written using [pytest](https://pytest.org) and located in `test_calculator.py`.
 
 ```bash
-python -m pytest          # if using pytest
-python -m unittest        # if using unittest
+python -m pytest                  # run all tests
+python -m pytest -v               # verbose output
+python -m pytest test_calculator.py  # run specific test file
+```
+
+Install pytest if needed:
+
+```bash
+pip install pytest
 ```
