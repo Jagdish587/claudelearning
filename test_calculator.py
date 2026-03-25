@@ -1,5 +1,5 @@
 import pytest
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, power
 
 
 def test_add():
@@ -29,3 +29,17 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError, match="Cannot divide by zero"):
         divide(10, 0)
+
+
+def test_power():
+    # Testing report:
+    # - positive base and exponent: 2^3 = 8
+    # - base to the power of 0: any number^0 = 1
+    # - exponent of 1: any number^1 = itself
+    # - negative exponent: 2^-1 = 0.5
+    # - zero base: 0^5 = 0
+    assert power(2, 3) == 8
+    assert power(5, 0) == 1
+    assert power(7, 1) == 7
+    assert power(2, -1) == 0.5
+    assert power(0, 5) == 0
