@@ -13,3 +13,8 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
+
+
+def power(base, exponent):
+    # Uses Python's built-in pow function to compute base raised to exponent
+    return pow(base, exponent)
